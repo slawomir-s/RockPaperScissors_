@@ -5,6 +5,7 @@
         <meta name="description" content="RockPaperScissors">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Rock, Paper, Scissors</title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -21,7 +22,7 @@
         </header>
         <section>
             <div class="container"> 
-               <h1> Welcome to the game</h1>
+               <h1> Welcome to the game!</h1>
                <span class="label label-default"> Rock</span> 
                <span class="label label-info"> Paper</span> 
                <span class="label label-danger"> Scissors </span> 
@@ -32,7 +33,7 @@
                 <button id="js-newGameButton" class="btn btn-default"> New game </button>
                 </div> 
             </div>
-            <div id="js-playerPickElement" class="container"> 
+            <div id="js-playerPickElement" class="container symbols"> 
                 <div class="row"> 
                     <button id="js-playerPick_rock" class="btn"> 
                         <span class="badge"> 
@@ -54,7 +55,7 @@
                     </button> 
                 </div> 
             </div>
-            <div id="js-resultsTableElement" class="container"> 
+            <div id="js-resultsTableElement" class="container result"> 
                 <div class="row"> 
                     <div class="col-xs-5"> 
                         <span id="js-playerPoints" class="badge"> 0 </span> 
