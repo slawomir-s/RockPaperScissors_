@@ -3,7 +3,8 @@
 body {
   font-family: 'Francois One', sans-serif;
   text-align: center;
-  background-color: black;
+  background: url('http://www.inglebygallery.com/wp-content/gallery/artist-alec-finlay/af_scissors_paper_rock_web.jpg') no-repeat center fixed;
+  background-size: cover;
   color: #fff;
 }
 
@@ -24,15 +25,14 @@ body {
   padding: 20px;
 }
 
-header .image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px
-}
-
-section h1 {
+header h1 {
   font-size: 30px;
   margin-bottom: 30px;
+}
+
+section {
+  background: rgba(193, 193, 190, 0.5);
+  margin: 0px 100px
 }
 
 section span.label {
@@ -69,18 +69,35 @@ section span.label {
 
 .result {
   font-size: 20px;
-  margin-bottom: 60px;
+  padding: 15px;
+}
+
+.sweet-alert input {
+  color: #000;
 }
 
 span.badge {
   font-size: 30px;
 }
 
-footer .container {
-  height: 50px;
-  background: rgba(139, 139, 140, 0.3);
-  color: #fff;
-  line-height: 1;
-  position: relative;
-  font-size: 15px;
-}
+  
+@media (max-width: 480px) {
+  
+  section {
+    background: rgba(193, 193, 190, 0.5);
+    margin: 0px 20px;
+  }
+
+  .result {
+    font-size: 15px;
+  }
+
+  .symbols .btn {
+    width: 75px;
+    height: 75px;    
+  }
+
+  .btn i {
+    font-size: 30px;
+  }
+} 

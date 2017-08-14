@@ -50,14 +50,35 @@ var playerPointsElem = document.getElementById('js-playerPoints'),
     computerPointsElem = document.getElementById('js-computerPoints'); 
     
 function newGame() {        
-    player.name = prompt('Please enter your name', 'Player name'); 
-    if (player.name) { 
+   
+  swal({
+  title: "Gregor, Mark ?",
+  text: 'Please enter your name',
+  type: "input",
+  showCancelButton: true,
+  closeOnConfirm: false,
+  animation: "slide-from-top",
+  },
+  
+  function(inputValue){
+  if (inputValue === false) return false;
+  
+  if (inputValue === "") {
+    swal.showInputError("You need a name!");
+    return false
+  }
+    
+  player.name = inputValue;
+  
+  if (player.name) { 
         player.score = computer.score = 0; 
         gameState = 'started'; 
         setGameElements(); 
         playerNameElem.innerHTML = player.name;
         setGamePoints();
-    } 
+  }
+  swal("Nice!", "Good luck " + inputValue + ". Let's go bro!", "success");
+  });  
 }
 
 function getComputerPick() { 
@@ -110,10 +131,16 @@ function playAgain() {
   if (player.score === 10) {
         gameState = 'ended'; 
         setGameElements();
-        alert('The winner is ' + player.name + '!');       
+        swal({
+          title: "You are the winner!",
+          imageUrl: 'http://www.siernieczek.pl/images/250x0/teams/325/20170312213401_fa538d93693e9302855da100f50bb2af.jpg',
+        });               
   } else if (computer.score === 10) {
   	    gameState = 'ended'; 
         setGameElements();
-        alert('The winner is computer');
-  }
+        swal({
+          title: "Computer defeated you. Next time it should be better!",
+          imageUrl: 'http://fmobserver.com/wp-content/uploads/2013/06/HelloLoserPX1.jpg',
+        });
+    }
 }
