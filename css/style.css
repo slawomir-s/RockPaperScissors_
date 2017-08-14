@@ -28,11 +28,12 @@ body {
 header h1 {
   font-size: 30px;
   margin-bottom: 30px;
+  color: rgb(217, 83, 79);
 }
 
 section {
-  background: rgba(193, 193, 190, 0.5);
-  margin: 0px 100px
+  background: rgba(193, 193, 190, 0.7);
+  margin: 0px 100px;
 }
 
 section span.label {
